@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Simulator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="device">
+            <!-- Device Header -->
+            <div class="device-header">
+                <div class="logo">MY PET v1.0</div>
+                <div class="led-indicator"></div>
+            </div>
+
+            <!-- Screen -->
+            <div class="screen">
+                <div class="screen-inner">
+                    <!-- Pet Display -->
+                    <div class="pet-container">
+                        <div id="pet-sprite" class="pet happy"></div>
+                        <div id="pet-name" class="pet-name">BUDDY</div>
+                    </div>
+
+                    <!-- Stats Display -->
+                    <div class="stats-container">
+                        <div class="stat">
+                            <span class="stat-label">❤️ HUNGER:</span>
+                            <div class="stat-bar">
+                                <div id="hunger-bar" class="stat-fill" style="width: 80%;"></div>
+                            </div>
+                            <span id="hunger-value" class="stat-value">80</span>
+                        </div>
+
+                        <div class="stat">
+                            <span class="stat-label">😊 HAPPY:</span>
+                            <div class="stat-bar">
+                                <div id="happiness-bar" class="stat-fill" style="width: 70%;"></div>
+                            </div>
+                            <span id="happiness-value" class="stat-value">70</span>
+                        </div>
+
+                        <div class="stat">
+                            <span class="stat-label">⚡ ENERGY:</span>
+                            <div class="stat-bar">
+                                <div id="energy-bar" class="stat-fill" style="width: 60%;"></div>
+                            </div>
+                            <span id="energy-value" class="stat-value">60</span>
+                        </div>
+                    </div>
+
+                    <!-- Status Messages -->
+                    <div id="status-message" class="status-message">Your pet is doing great!</div>
+                </div>
+            </div>
+
+            <!-- Controls -->
+            <div class="controls">
+                <button class="btn btn-feed" onclick="feedPet()">
+                    <span class="btn-icon">🍖</span>
+                    <span class="btn-label">FEED</span>
+                </button>
+                <button class="btn btn-play" onclick="playWithPet()">
+                    <span class="btn-icon">🎮</span>
+                    <span class="btn-label">PLAY</span>
+                </button>
+                <button class="btn btn-sleep" onclick="petSleep()">
+                    <span class="btn-icon">💤</span>
+                    <span class="btn-label">SLEEP</span>
+                </button>
+            </div>
+
+            <!-- Device Footer -->
+            <div class="device-footer">
+                <div class="speaker-grille">
+                    <div class="speaker-hole"></div>
+                    <div class="speaker-hole"></div>
+                    <div class="speaker-hole"></div>
+                    <div class="speaker-hole"></div>
+                    <div class="speaker-hole"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Game Info -->
+        <div class="game-info">
+            <h2>🎮 HOW TO PLAY</h2>
+            <ul>
+                <li><strong>FEED:</strong> Give your pet food to increase hunger</li>
+                <li><strong>PLAY:</strong> Play games to boost happiness</li>
+                <li><strong>SLEEP:</strong> Let your pet rest to restore energy</li>
+            </ul>
+            <p class="warning">⚠️ Stats decrease over time! Keep your pet healthy!</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
